@@ -386,6 +386,48 @@
   }
 
   /* ============================================================
+     PARTY INFO
+     ============================================================ */
+  .party{ padding:8rem 0; background:var(--ivory); }
+  .party-head{ text-align:center; margin-bottom:3.5rem; }
+  .party-grid{ display:grid; gap:2rem; }
+  .party-panel{
+    background:var(--blush-white); border:1px solid var(--line); padding:2.2rem; border-radius:2px;
+    box-shadow:0 18px 40px -24px rgba(43,38,33,0.2);
+  }
+  .party-panel h3{ font-family:var(--font-display); font-size:1.8rem; font-weight:500; margin-bottom:0.6rem; }
+  .party-panel p{ color:var(--ink-soft); margin-bottom:1.2rem; }
+  .party-gallery{ display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; }
+  .party-card{ overflow:hidden; border:1px solid var(--line); border-radius:2px; background:var(--champagne); }
+  .party-card img{ width:100%; height:220px; object-fit:cover; transition:transform .6s var(--ease); }
+  .party-card:hover img{ transform:scale(1.05); }
+  .party-card .caption{ padding:0.8rem 0.95rem; font-size:0.9rem; color:var(--ink-soft); }
+  .party-rules{ list-style:none; display:grid; gap:0.8rem; }
+  .party-rules li{ padding-bottom:0.8rem; border-bottom:1px solid var(--line); display:flex; gap:0.7rem; color:var(--ink-soft); }
+  .party-rules li:last-child{ border-bottom:none; padding-bottom:0; }
+  .party-rules strong{ color:var(--ink); font-weight:600; }
+  @media (max-width:640px){ .party-card img{ height:190px; } }
+
+  /* ============================================================
+     EXTRA SECTIONS
+     ============================================================ */
+  .timeline, .travel, .registry{ padding:8rem 0; background:var(--champagne); }
+  .timeline + .travel, .travel + .registry{ padding-top:0; }
+  .section-card{
+    background:var(--blush-white); border:1px solid var(--line); border-radius:2px;
+    padding:2.2rem; box-shadow:0 18px 40px -24px rgba(43,38,33,0.2);
+  }
+  .timeline-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.2rem; margin-top:2rem; }
+  .time-card{ border:1px solid var(--line); border-radius:2px; padding:1.2rem; background:var(--ivory); }
+  .time-card .time{ font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:0.5rem; }
+  .time-card h4{ font-family:var(--font-display); font-size:1.4rem; font-weight:500; margin-bottom:0.45rem; }
+  .time-card p{ color:var(--ink-soft); }
+  .travel-list, .registry-list{ list-style:none; display:grid; gap:0.8rem; margin-top:1.2rem; }
+  .travel-list li, .registry-list li{ padding-bottom:0.8rem; border-bottom:1px solid var(--line); color:var(--ink-soft); }
+  .travel-list li:last-child, .registry-list li:last-child{ border-bottom:none; padding-bottom:0; }
+  .travel-list strong, .registry-list strong{ color:var(--ink); font-weight:600; }
+
+  /* ============================================================
      VENDORS
      ============================================================ */
   .vendors{ padding:8rem 0; background:var(--ivory); }
@@ -600,6 +642,7 @@
   <nav class="nav-links" aria-label="Section navigation">
     <a href="#story">Our Story</a>
     <a href="#gallery">Gallery</a>
+    <a href="#party">Party Info</a>
     <a href="#vendors">Team</a>
     <a href="#details">Details</a>
     <a href="#guestbook">Guestbook</a>
@@ -611,7 +654,8 @@
      ============================================================ -->
 <section class="hero" id="top">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop" alt="Oluwatomisin and Nosazena on their wedding day">
+    <img src="img.or-3.jpeg
+    " alt="Oluwatomisin and Nosazena on their wedding day">
   </div>
   <div class="hero-content">
     <p class="hero-eyebrow">Events by Peju presents</p>
@@ -622,10 +666,10 @@
     </h1>
     <p class="hero-date">Saturday · The 14th of November, 2026 · Lagos</p>
   </div>
-  <div class="scroll-cue">
+  <!-- <div class="scroll-cue">
     <span>Scroll</span>
     <div class="scroll-line"></div>
-  </div>
+  </div> -->
 </section>
 
 <!-- Planner credit banner -->
@@ -646,7 +690,7 @@
 
     <div class="chapter">
       <div class="chapter-media reveal-left">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&fit=crop" alt="The first meeting, a quiet afternoon">
+        <img loading="lazy" src="img.or-1.jpeg" alt="The first meeting, a quiet afternoon">
       </div>
       <div class="chapter-copy reveal-right">
         <span class="num">01</span>
@@ -657,7 +701,7 @@
 
     <div class="chapter reverse">
       <div class="chapter-media reveal-right">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&fit=crop" alt="Their first date by the water">
+        <img loading="lazy" src="img.or-2.jpeg" alt="Their first date by the water">
       </div>
       <div class="chapter-copy reveal-left">
         <span class="num">02</span>
@@ -668,7 +712,7 @@
 
     <div class="chapter">
       <div class="chapter-media reveal-left">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&fit=crop" alt="The proposal moment">
+        <img loading="lazy" src="img.or-3.jpeg" alt="The proposal moment">
       </div>
       <div class="chapter-copy reveal-right">
         <span class="num">03</span>
@@ -717,6 +761,143 @@
   <button class="lightbox-next" id="lbNext" aria-label="Next image">&rarr;</button>
   <div class="lightbox-caption" id="lbCaption"></div>
 </div>
+
+<!-- ============================================================
+     PARTY INFO
+     ============================================================ -->
+<section class="party" id="party">
+  <div class="wrap">
+    <div class="party-head reveal">
+      <span class="eyebrow">Chapter Three</span>
+      <h2 class="section-title">The <em>Wedding Party</em></h2>
+    </div>
+
+    <div class="party-grid">
+      <div class="party-panel reveal">
+        <h3>Groom's Men</h3>
+        <p>The men standing proudly beside the groom on this beautiful day.</p>
+        <div class="party-gallery">
+          <div class="party-card">
+            <img loading="lazy" src="img-1.jpeg" alt="Groom's men portrait">
+            <div class="caption">Best Man &amp; Close Friend</div>
+          </div>
+          <div class="party-card">
+            <img loading="lazy" src="img-2.jpeg" alt="Groom's men portrait">
+            <div class="caption">Groom's Men in Style</div>
+          </div>
+          <div class="party-card">
+            <img loading="lazy" src="img-3.jpeg" alt="Groom's men portrait">
+            <div class="caption">The Support Circle</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="party-panel reveal">
+        <h3>Bridesmaids</h3>
+        <p>The bridesmaids bringing elegance, grace, and joy to the celebration.</p>
+        <div class="party-gallery">
+          <div class="party-card">
+            <img loading="lazy" src="img-4.jpeg" alt="Bridesmaids portrait">
+            <div class="caption">Chief Bridesmaid</div>
+          </div>
+          <div class="party-card">
+            <img loading="lazy" src="img-5.jpeg" alt="Bridesmaids portrait">
+            <div class="caption">Bridesmaids in Champagne</div>
+          </div>
+          <div class="party-card">
+            <img loading="lazy" src="img-6.jpeg" alt="Bridesmaids portrait">
+            <div class="caption">The Bridal Squad</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="party-panel reveal">
+        <h3>Party Rules &amp; Regulations</h3>
+        <ul class="party-rules">
+          <li><strong>1.</strong>Please arrive at least 30 minutes before the ceremony begins.</li>
+          <li><strong>2.</strong>Kindly keep the ceremony area quiet and free of distractions during vows.</li>
+          <li><strong>3.</strong>Photography is welcome, but please avoid blocking the photographer or guests.</li>
+          <li><strong>4.</strong>Respect the dress code and keep the celebration elegant and joyful.</li>
+        </ul>
+      </div>
+
+      <div class="party-panel reveal">
+        <h3>Other Important Things</h3>
+        <ul class="party-rules">
+          <li><strong>Arrival:</strong> The reception doors open at 6:30 PM for welcome drinks and mingling.</li>
+          <li><strong>Food &amp; Drinks:</strong> A full dinner service and refreshments will be provided.</li>
+          <li><strong>Gift Table:</strong> Gifts may be placed at the reception gift corner.</li>
+          <li><strong>Weather Plan:</strong> An indoor backup will be available in case of rain.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WEDDING TIMELINE
+     ============================================================ -->
+<section class="timeline" id="timeline">
+  <div class="wrap">
+    <div class="party-head reveal">
+      <span class="eyebrow">Chapter Four</span>
+      <h2 class="section-title">The <em>Day's Timeline</em></h2>
+    </div>
+
+    <div class="timeline-grid">
+      <div class="time-card reveal">
+        <div class="time">3:30 PM</div>
+        <h4>Guests Arrive</h4>
+        <p>Soft music, welcome drinks, and a chance to settle in before the ceremony begins.</p>
+      </div>
+      <div class="time-card reveal">
+        <div class="time">4:00 PM</div>
+        <h4>Ceremony</h4>
+        <p>Vows, blessings, and the exchange of rings in a warm and intimate setting.</p>
+      </div>
+      <div class="time-card reveal">
+        <div class="time">6:30 PM</div>
+        <h4>Reception</h4>
+        <p>Dinner, speeches, dancing, and plenty of joyful celebration into the evening.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRAVEL & STAY
+     ============================================================ -->
+<section class="travel" id="travel">
+  <div class="wrap">
+    <div class="section-card reveal">
+      <span class="eyebrow">Practical Info</span>
+      <h3 class="section-title">Travel &amp; <em>Accommodation</em></h3>
+      <ul class="travel-list">
+        <li><strong>Venue:</strong> The Ivory Pavilion, Lagos.</li>
+        <li><strong>Parking:</strong> Secure parking will be available on site for guests arriving by car.</li>
+        <li><strong>Hotels:</strong> Nearby hotels and guest houses can be arranged on request.</li>
+        <li><strong>Transport:</strong> Kindly plan for arrival at least 30 minutes early to avoid traffic delays.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REGISTRY & GIFTS
+     ============================================================ -->
+<section class="registry" id="registry">
+  <div class="wrap">
+    <div class="section-card reveal">
+      <span class="eyebrow">Kindly Note</span>
+      <h3 class="section-title">Registry &amp; <em>Gifts</em></h3>
+      <ul class="registry-list">
+        <li><strong>Your presence:</strong> The greatest gift of all is celebrating with us.</li>
+        <li><strong>Gifts:</strong> A gift table will be available at the reception for those who wish to give.</li>
+        <li><strong>Cards:</strong> Kindly leave a note or card for the couple if you would like to share a message.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!-- ============================================================
      VENDORS / TEAM
@@ -1010,18 +1191,18 @@
      GALLERY — build masonry from data, filter, lightbox
      ============================================================ */
   const galleryData = [
-    { src:"https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&fit=crop", cat:"Ceremony", h:280 },
-    { src:"https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&fit=crop", cat:"Reception", h:340 },
-    { src:"https://images.unsplash.com/photo-1519741497674-611481863552?w=800&fit=crop", cat:"Ceremony", h:220 },
-    { src:"https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&fit=crop", cat:"Details", h:300 },
-    { src:"https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&fit=crop", cat:"Getting Ready", h:360 },
-    { src:"https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&fit=crop", cat:"Ceremony", h:260 },
-    { src:"https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&fit=crop", cat:"Getting Ready", h:320 },
-    { src:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&fit=crop", cat:"Reception", h:240 },
-    { src:"https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&fit=crop", cat:"Details", h:300 },
-    { src:"https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800&fit=crop", cat:"Reception", h:280 },
-    { src:"https://images.unsplash.com/photo-1583939411023-30fc0dc6be24?w=800&fit=crop", cat:"Getting Ready", h:260 },
-    { src:"https://images.unsplash.com/photo-1470116945706-e6bf5d5a53ca?w=800&fit=crop", cat:"Details", h:320 }
+    { src:"img.or-1.jpeg", cat:"Ceremony", h:280 },
+    { src:"img.or-2.jpeg", cat:"Reception", h:340 },
+    { src:"img.or-3.jpeg", cat:"Ceremony", h:220 },
+    { src:"img.or-4.jpeg", cat:"Details", h:300 },
+    { src:"img.or-5.jpeg", cat:"Getting Ready", h:360 },
+    { src:"img.or-6.jpeg", cat:"Ceremony", h:260 },
+    { src:"img.or-7.jpeg", cat:"Getting Ready", h:320 },
+    { src:"img.or-8.jpeg", cat:"Reception", h:240 },
+    { src:"img.or-9.jpeg", cat:"Details", h:300 },
+    { src:"img.or-10.jpeg", cat:"Reception", h:280 },
+    { src:"img-21.jpeg", cat:"Getting Ready", h:260 },
+    { src:"img-22.jpeg", cat:"Details", h:320 }
   ];
 
   const masonry = document.getElementById('masonry');
